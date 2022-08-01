@@ -1,0 +1,42 @@
+﻿<Window x:Class="TestWork.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestWork"
+        mc:Ignorable="d"
+        Title="Заказы" Height="450" Width="920">
+    <Grid>
+        <DataGrid x:Name="grid" Margin="10,10,10,65" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="id"
+                                    Width="50"
+                                    Binding="{Binding Id}"
+                                    Header="Id"
+                                    IsReadOnly="True">
+                </DataGridTextColumn>
+                <DataGridTextColumn x:Name="name"
+                                    Width="200"
+                                    Binding="{Binding Name}"
+                                    Header="Имя">
+                </DataGridTextColumn>
+                <DataGridTextColumn x:Name="numberTel"
+                                    Width="200"
+                                    Binding="{Binding NumberTel}"
+                                    Header="Номер телефона">
+                </DataGridTextColumn>
+                <DataGridTextColumn x:Name="Email"
+                                    Width="200"
+                                    Binding="{Binding Email}"
+                                    Header="Email">
+                </DataGridTextColumn>
+                <DataGridTextColumn x:Name="NameTovar"
+                                    Width="*"
+                                    Binding="{Binding NameTovar}"
+                                    Header="Название товара">
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="GetDataButton" Margin="10,359,10,10" FontSize="22" FontWeight="Bold" Background="#FF71AC9C" FontFamily="Times New Roman">Получить данные</Button>
+    </Grid>
+</Window>
